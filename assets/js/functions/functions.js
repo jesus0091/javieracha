@@ -10,3 +10,19 @@ $(function(){
 	});
 });
 
+$(document).on('click', '.dark-light', function () {
+    $('body').toggleClass('light-mode');
+
+    if(  $('body').hasClass('light-mode')  ){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+if(localStorage.getItem('dark-mode') === 'true'){
+	$('body').addClass('light-mode');
+
+} else {
+	$('body').removeClass('light-mode');
+}
