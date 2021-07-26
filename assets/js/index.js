@@ -1,3 +1,3 @@
-$(document).on('click' on outerHeight, function () {
+$(document).on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
