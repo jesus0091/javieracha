@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus0091/javieracha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesus0091/javieracha/issues"
+  },
+  "homepage": "https://github.com/jesus0091/javieracha#readme",
   "description": ""
 }

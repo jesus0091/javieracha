@@ -28,10 +28,13 @@
     display: flex;
     width: 100%;
 
-
+.navbar-brand {
+    font-size: 1.30rem;
+}
     .brand-1 {
         font-family: 'Lato', sans-serif;
         font-weight: 900;
+
         background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72, #a8eb12);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -62,8 +65,9 @@
             justify-content: center;
             align-items: center;
             color: white;
-            letter-spacing: .5px;
+            letter-spacing: 1px;
             font-weight: 300;
+            font-size: .85rem;
         }
 
         .icon-navbar {
@@ -76,10 +80,11 @@
             width: 50px;
             height: 50px;
             color: white;
+            margin-bottom: 5px;
             z-index: 1;
 
-            img {
-                height: 30px;
+            i {
+                font-size: 1rem;
             }
 
             &::after {
@@ -108,16 +113,8 @@
     background: #00a060;
 }
 
-.animate__animated.animate__bounce1 {
-    animation-delay: 0s;
-}
-
-.animate__animated.animate__bounce2 {
-    animation-delay: 0.1s;
-}
-
-.animate__animated.animate__bounce3 {
-    animation-delay: 0.15s;
+.config-style {
+    border-top: 1px solid rgba(255 255 255 / 0.2);
 }
 
 
@@ -2509,8 +2506,8 @@ ____________________________________________________________*/
     justify-content: center;
     align-items: center;
 	margin-bottom: 10px;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
     border-radius: 100px;
     border: 1px solid rgba(255 255 255 / 0.2);
 	transition: transform .2s;
