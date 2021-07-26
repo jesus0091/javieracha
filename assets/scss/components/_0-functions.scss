@@ -1,0 +1,17 @@
+@mixin boxModel( $display, $direction, $justify-content, $align-items, $margin, $padding ) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    margin: $margin;
+    padding: $padding;    
+}
+
+@mixin fontStyle() {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    font-weight: lighter;
+    letter-spacing: normal;
+    
+}
+
