@@ -1,0 +1,171 @@
+/* --------------------- imports ------------------ */
+@import '../utilities/variables';
+/* ------------------------------------------------ */
+
+.load-opening-bar {
+    position: absolute;
+    bottom: 0%;
+    height: 5px;
+    width: 0%;
+    background: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
+    z-index: 400;
+    animation: Loading;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.2s;
+
+    @keyframes Loading {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:991px) {
+        top: 0%;
+        bottom: unset;
+    }
+}
+
+.load-opening-bg {
+    overflow: hidden;
+    background-color: $color-black;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    animation: Opening;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+
+    @keyframes Opening {
+        0% {
+            height: 100vh;
+            top: 0px;
+        }
+
+        100% {
+            height: 0vh;
+            top: 1200px;
+        }
+    }
+}
+
+
+
+.load-circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.load-circle:before,
+.load-circle:after {
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+.load-circle:before {
+    animation: ball1 1s infinite;
+    background-color: $color-1;
+    box-shadow: 30px 0 0 $color-2;
+    margin-bottom: 10px;
+}
+
+.load-circle:after {
+    animation: ball2 1s infinite;
+    background-color: $color-3;
+    box-shadow: 30px 0 0 $color-4;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(0.8);
+        -moz-transform: rotate(0deg) scale(0.8);
+    }
+
+    50% {
+        -webkit-transform: rotate(360deg) scale(1.2);
+        -moz-transform: rotate(360deg) scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: rotate(720deg) scale(0.8);
+        -moz-transform: rotate(720deg) scale(0.8);
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 #f8b334;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #f8b334;
+        margin-bottom: 0;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #f8b334;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 #97bf0d;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #97bf0d;
+        margin-top: -20px;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #97bf0d;
+        margin-top: 0;
+    }
+}
+
+.load-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgba($color-white, 0.2);
+    position: absolute;
+    bottom: 10%;
+
+    .load-text-2 {
+        margin-left: 5px;
+        background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
