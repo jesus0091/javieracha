@@ -1,4 +1,4 @@
-@mixin boxModel( $display, $direction, $justify-content, $align-items, $margin, $padding ) {
+@mixin flexBox( $display, $direction, $justify-content, $align-items, $margin, $padding ) {
     display: $display;
     flex-direction: $direction;
     justify-content: $justify-content;

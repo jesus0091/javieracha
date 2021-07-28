@@ -33,9 +33,9 @@
 
 .load-opening-bg {
     overflow: hidden;
-    background-color: $color-black;
+    background-color: darken($color-1, 20%);
     position: absolute;
-    z-index: 200;
+    z-index: 9999;
     top: 0;
     height: 100vh;
     width: 100%;
@@ -113,36 +113,36 @@
 
 @keyframes ball1 {
     0% {
-        box-shadow: 30px 0 0 #f8b334;
+        box-shadow: 30px 0 0 $color-2;
     }
 
     50% {
-        box-shadow: 0 0 0 #f8b334;
+        box-shadow: 0 0 0 $color-2;
         margin-bottom: 0;
         -webkit-transform: translate(15px, 15px);
         -moz-transform: translate(15px, 15px);
     }
 
     100% {
-        box-shadow: 30px 0 0 #f8b334;
+        box-shadow: 30px 0 0 $color-2;
         margin-bottom: 10px;
     }
 }
 
 @keyframes ball2 {
     0% {
-        box-shadow: 30px 0 0 #97bf0d;
+        box-shadow: 30px 0 0 $color-4;
     }
 
     50% {
-        box-shadow: 0 0 0 #97bf0d;
+        box-shadow: 0 0 0 $color-4;
         margin-top: -20px;
         -webkit-transform: translate(15px, 15px);
         -moz-transform: translate(15px, 15px);
     }
 
     100% {
-        box-shadow: 30px 0 0 #97bf0d;
+        box-shadow: 30px 0 0 $color-4;
         margin-top: 0;
     }
 }
@@ -158,13 +158,13 @@
     font-size: .75rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: rgba($color-white, 0.2);
+    color: rgba($color-white, 0.5);
     position: absolute;
-    bottom: 10%;
+    bottom: 10vh;
 
     .load-text-2 {
         margin-left: 5px;
-        background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72);
+        background: -webkit-linear-gradient(left bottom, $color-1, $color-2, $color-3, $color-4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
