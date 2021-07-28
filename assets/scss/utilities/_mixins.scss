@@ -2,9 +2,7 @@
     display: $display;
     flex-direction: $direction;
     justify-content: $justify-content;
-    align-items: $align-items;
-    margin: $margin;
-    padding: $padding;    
+    align-items: $align-items;   
 }
 
 @mixin fontStyle() {
