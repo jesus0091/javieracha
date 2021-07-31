@@ -496,7 +496,7 @@ template {
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  bottom: 10vh;
+  bottom: 20vh;
 }
 .load-text .load-text-2 {
   margin-left: 5px;
@@ -741,6 +741,7 @@ template {
   position: fixed;
   bottom: 10px;
   left: 10px;
+  z-index: 999;
 }
 .settings .btn__settings {
   display: flex;
@@ -803,6 +804,50 @@ template {
 .light-mode .dark-light svg {
   fill: transparent;
   stroke: rgba(255, 255, 255, 0.2);
+}
+
+.title-styler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 60px;
+}
+.title-styler h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.75rem;
+  color: white;
+  margin: 0;
+  z-index: 1;
+}
+.title-styler h2 span {
+  font-weight: 900;
+  background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72, #a8eb12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title-styler .back-text {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 4rem;
+  position: absolute;
+  text-transform: lowercase;
+  line-height: 1;
+  top: -10px;
+  z-index: -1;
+}
+
+.about-me .about-text {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 1.15rem;
+  border-radius: 10px;
+  font-weight: normal;
+  color: white;
+  margin: 15px 0;
+  text-align: center;
 }
 
 .tracking-in-expand {
@@ -968,6 +1013,32 @@ template {
     opacity: 1;
   }
 }
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.experience h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+.experience ul {
+  padding: 0;
+  display: flex;
+}
+.experience ul li {
+  display: flex;
+  list-style: none;
+  margin: 15px;
+}
+.experience ul li img {
+  height: 50px;
+}
+
 /* ------------------------------------------------ */
 /* --------------------- themes ------------------- */
 /* ------------------------------------------------ */
