@@ -505,10 +505,17 @@ template {
   -webkit-text-fill-color: transparent;
 }
 
+/* --------------------- imports ------------------ */
+/* ------------------------------------------------ */
+#about, #contact {
+  padding-top: 50px;
+}
+
 .form_style {
   padding: 20px !important;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to right top, rgba(0, 77, 122, 0.5), rgba(0, 135, 147, 0.5), rgba(0, 191, 114, 0.5));
+  backdrop-filter: blur(5px);
 }
 .form_style .inp {
   position: relative;
@@ -539,36 +546,38 @@ template {
   transform: scaleX(0);
   transform-origin: left;
 }
-.form_style .inp input {
+.form_style .inp input, .form_style .inp textarea {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
   border: 0;
   font-family: inherit;
   padding: 5px 12px 5px 12px;
-  margin-top: 20px;
+  margin-top: 15px;
   height: 35px;
   font-size: 16px;
   font-weight: 400;
   background: none;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -1.5px 0 rgba(0, 0, 0, 0.3);
   color: var(--theme-text-h-color);
   transition: all 0.15s ease;
   resize: none;
 }
-.form_style .inp input:not(:placeholder-shown) + .label {
+.form_style .inp input:not(:placeholder-shown) + .label, .form_style .inp textarea:not(:placeholder-shown) + .label {
   color: rgba(0, 0, 0, 0.5);
   transform: translate3d(0, -20px, 0) scale(0.75);
 }
-.form_style .inp input:focus {
+.form_style .inp input:focus, .form_style .inp textarea:focus {
   outline: none;
   box-shadow: inset 0 -2px 0 white;
 }
-.form_style .inp input:focus + .label {
+.form_style .inp input:focus + .label, .form_style .inp textarea:focus + .label {
   color: white;
   transform: translate3d(0, -20px, 0) scale(0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.form_style .inp input:focus + .focus-bg {
+.form_style .inp input:focus + .focus-bg, .form_style .inp textarea:focus + .focus-bg {
   transform: scaleX(1);
   transition: all 0.1s ease;
 }
@@ -601,15 +610,17 @@ template {
   height: 60px;
   color: white;
   padding: 5px 15px;
-  font-size: 20px;
+  font-size: 1rem;
   border-radius: 100px;
   margin: 5px;
-  border: none !important;
+  border: 1px solid fill;
+  border-color: linear-gradient(to right top, rgba(0, 77, 122, 0.5), rgba(0, 135, 147, 0.5), rgba(0, 191, 114, 0.5));
   background-color: green;
 }
 .f_buttons .btn_submit:disabled {
-  color: white;
-  background-color: gray;
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .formulario__label {
@@ -1047,11 +1058,11 @@ template {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.05);
-  font-size: 4rem;
+  font-size: 3.25rem;
   position: absolute;
   text-transform: lowercase;
   line-height: 1;
-  top: -10px;
+  top: 0;
   z-index: -1;
 }
 
@@ -1262,7 +1273,6 @@ footer {
 .card_footer {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right top, #004d7a, #008793, #00bf72);
   border-radius: 10px;
   padding: 1rem;
   overflow: hidden;
@@ -1276,7 +1286,7 @@ footer {
 .card_footer p {
   font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0;
