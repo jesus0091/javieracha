@@ -382,7 +382,7 @@ template {
 
 .load-opening-bg {
   overflow: hidden;
-  background-color: #000d14;
+  background: linear-gradient(#0a161b, #203A43, #203e4b);
   position: absolute;
   z-index: 9999;
   top: 0;
@@ -528,12 +528,13 @@ template {
   top: 20px;
   left: 12px;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
   transform-origin: 0 0;
   transform: translate3d(0, 0, 0);
   transition: all 0.2s ease;
   pointer-events: none;
+  font-family: "Roboto", sans-serif;
 }
 .form_style .inp .focus-bg {
   position: absolute;
@@ -541,7 +542,7 @@ template {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -558,7 +559,7 @@ template {
   font-size: 16px;
   font-weight: 400;
   background: none;
-  box-shadow: inset 0 -1.5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -1.5px 0 rgba(255, 255, 255, 0.3);
   color: var(--theme-text-h-color);
   transition: all 0.15s ease;
   resize: none;
@@ -591,22 +592,27 @@ template {
   align-items: center;
   width: 40px;
   height: 40px;
-  color: #b3b3b3;
+  color: white;
   padding: 10px;
   font-size: 16px;
   border-radius: 100px;
   margin: 5px;
-  border: none !important;
-  background-color: #cc0000;
+  border: 1.5px solid white;
+  background: none;
 }
 .f_buttons .btn_erase:hover {
-  color: white;
-  background-color: red;
+  color: rgba(255, 0, 0, 0.7);
+  transition: 0.2s ease all;
+}
+.f_buttons .btn_erase:active {
+  transform: scale(0.9);
+  transition: 0.1s ease all;
 }
 .f_buttons .btn_submit {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
   height: 60px;
   color: white;
   padding: 5px 15px;
@@ -735,6 +741,12 @@ template {
 /* --------------------- layouts ------------------ */
 /* --------------------- imports ------------------ */
 /* ------------------------------------------------ */
+body {
+  background: linear-gradient(to right top, #03141f, #011e24);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .nav-navbar-style {
   display: flex;
   width: 100%;
@@ -742,6 +754,10 @@ template {
 .nav-navbar-style .navbar-brand {
   font-size: 1.3rem;
   text-decoration: none;
+}
+.nav-navbar-style .navbar-brand:active {
+  transform: scale(0.9);
+  transition: 0.1s ease all;
 }
 .nav-navbar-style .brand-1 {
   font-family: "Lato", sans-serif;
@@ -774,6 +790,8 @@ template {
 }
 .nav-navbar-style .navbar-button:active {
   border: none;
+  transform: scale(0.9);
+  transition: 0.1s ease all;
 }
 
 .navbar-collapse-style {
@@ -824,6 +842,10 @@ template {
   left: 0;
   background: rgba(255, 255, 255, 0.1);
   z-index: 0;
+}
+.navbar-collapse-style ul .icon-navbar:active {
+  transform: scale(0.9);
+  transition: 0.05s ease all;
 }
 
 .bg-icon-1 {
@@ -930,6 +952,10 @@ template {
   color: white;
   background: -webkit-linear-gradient(left bottom, #004d7a, #008793);
 }
+.presentation .btn-presentation:active {
+  transform: scale(0.9);
+  transition: 0.1s ease all;
+}
 
 .social {
   display: flex;
@@ -939,6 +965,7 @@ template {
 }
 
 .socialList {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -948,15 +975,19 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
   width: 35px;
   height: 35px;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.2s;
+  margin: 0 5px;
 }
 .socialList__item:hover {
   transform: translateY(-3px);
+}
+.socialList__item:active {
+  transform: scale(0.9);
+  transition: 0.1s ease all;
 }
 
 .socialList__icon {
@@ -1066,6 +1097,9 @@ template {
   z-index: -1;
 }
 
+.about-me {
+  position: relative;
+}
 .about-me .about-text {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);

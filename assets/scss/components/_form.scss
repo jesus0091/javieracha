@@ -26,12 +26,13 @@ $f-t: 0.5;
             top: 20px;
             left: 12px;
             font-size: 16px;
-            color: rgba(black, .5);
-            font-weight: 500;
+            color: rgba(white, .5);
+            font-weight: 300;
             transform-origin: 0 0;
             transform: translate3d(0, 0, 0);
             transition: all .2s ease;
             pointer-events: none;
+            font-family: 'Roboto', sans-serif;
         }
 
         .focus-bg {
@@ -40,7 +41,7 @@ $f-t: 0.5;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(black, .05);
+            background: rgba(white, .05);
             z-index: -1;
             transform: scaleX(0);
             transform-origin: left;
@@ -58,7 +59,7 @@ $f-t: 0.5;
             font-size: 16px;
             font-weight: 400;
             background: none;
-            box-shadow: inset 0 -1.5px 0 rgba(black, .3);
+            box-shadow: inset 0 -1.5px 0 rgba(white, .3);
             color: var(--theme-text-h-color);
             transition: all .15s ease;
             resize: none;
@@ -97,17 +98,22 @@ $f-t: 0.5;
         align-items: center;
         width: 40px;
         height: 40px;
-        color: darken(white, 30%);
+        color: rgba(white, 1);
         padding: 10px;
         font-size: 16px;
         border-radius: 100px;
         margin: 5px;
-        border: none !important;
-        background-color: darken(red, 10%);
+        border: 1.5px solid rgba(white, 1);
+        background: none;
 
         &:hover {
-            color: white;
-            background-color: red;
+            // color: white;
+            color: rgba(red, 0.7);
+            transition: 0.2s ease all;
+        }
+        &:active {
+            transform: scale(0.9);
+            transition: 0.1s ease all;
         }
     }
 
@@ -115,7 +121,7 @@ $f-t: 0.5;
         display: flex;
         justify-content: center;
         align-items: center;
-        // width: 60px;
+        width: 60px;
         height: 60px;
         color: white;
         padding: 5px 15px;

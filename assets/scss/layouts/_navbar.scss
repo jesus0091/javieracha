@@ -2,6 +2,12 @@
 @import '../utilities/variables';
 /* ------------------------------------------------ */
 
+body {
+	background: linear-gradient(to right top, #03141f, #011e24);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
 .nav-navbar-style {
 	display: flex;
 	width: 100%;
@@ -9,6 +15,11 @@
 	.navbar-brand {
 		font-size: 1.30rem;
 		text-decoration: none;
+
+		&:active {
+			transform: scale(0.9);
+			transition: 0.1s ease all;
+		}
 	}
 
 	.brand-1 {
@@ -33,19 +44,22 @@
 		margin-left: auto;
 		width: 35px;
 		height: 35px;
-	
+
 		.icon {
 			width: 23px;
 			height: 23px;
 		}
-	
+
 		&:focus {
 			border: none;
 			box-shadow: none;
 		}
-	
+
 		&:active {
 			border: none;
+			transform: scale(0.9);
+			transition: 0.1s ease all;
+
 		}
 	}
 }
@@ -101,6 +115,11 @@
 				background: rgba(255 255 255 / 0.1);
 				z-index: 0;
 			}
+
+			&:active {
+				transform: scale(0.9);
+				transition: 0.05s ease all;
+			}
 		}
 	}
 }
@@ -120,4 +139,3 @@
 .config-style {
 	border-top: 1px solid rgba(255 255 255 / 0.2);
 }
-

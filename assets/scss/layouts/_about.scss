@@ -37,6 +37,7 @@
 }
 
 .about-me {
+    position: relative;
 
     .about-text {
         background: rgba( $color-white, 0.05);
@@ -49,4 +50,5 @@
         text-align: center;
     }
 
+    
 }

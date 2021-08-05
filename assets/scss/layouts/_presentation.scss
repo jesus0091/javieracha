@@ -85,18 +85,24 @@
         }
     }
 
-    .btn-presentation{
+    .btn-presentation {
         display: flex;
         justify-content: center;
         margin: 10px auto;
 
 
-        a{
-        padding: 10px 15px;
-        border-radius: 50px;
-        text-decoration: none;
-        color: white;
-        background: -webkit-linear-gradient(left bottom, #004d7a, #008793);;
+        a {
+            padding: 10px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            background: -webkit-linear-gradient(left bottom, #004d7a, #008793);
+            ;
+        }
+        &:active {
+            transform: scale(0.9);
+            transition: 0.1s ease all;
+    
         }
 
     }
@@ -110,43 +116,31 @@
 }
 
 .socialList {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-
-    // &:after {
-    //     content: '';
-    //     display: block;
-    //     margin: 0 auto;
-    //     width: 1px;
-    //     height: 40px;
-    //     background: rgba(255 255 255 / 0.2);
-    // }
-
-    // &:before {
-    //     content: '';
-    //     display: block;
-    //     margin: 0 auto 10px;
-    //     width: 1px;
-    //     height: 40px;
-    //     background: rgba(255 255 255 / 0.2);
-
-    // }
 }
 
 .socialList__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
     width: 35px;
     height: 35px;
     border-radius: 100px;
     border: 1px solid rgba(255 255 255 / 0.2);
     transition: transform .2s;
+    margin: 0 5px;
 
     &:hover {
         transform: translateY(-3px);
+
+    }
+
+    &:active {
+        transform: scale(0.9);
+        transition: 0.1s ease all;
 
     }
 }

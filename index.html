@@ -49,7 +49,7 @@
     <!------------------------------------------------------------------------------------------------------------------>
 </head>
 
-<body class="bg-dark" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="300">
+<body class="" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="300">
     <!-------------------------------------------------- Loading ------------------------------------------------------->
     <div id="loading" class="load-opening-bg">
         <div class="load-opening-bar"></div>
@@ -138,25 +138,6 @@
                             <div class="col-10 img__mask">
                                 <img src="assets/images/jpg/javier_acha.jpg" alt="">
                             </div>
-                            <div class="col-3 d-none social">
-                                <ul class="socialList">
-                                    <li class="socialList__item">
-                                        <a class="socialList__link" href="#" target="_blank">
-                                            <span class="socialList__icon"><i class="fab fa-linkedin-in"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="socialList__item">
-                                        <a class="socialList__link" href="#" target="_blank">
-                                            <span class="socialList__icon"><i class="fab fa-twitter"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="socialList__item m-0">
-                                        <a class="socialList__link" href="#" target="_blank">
-                                            <span class="socialList__icon"><i class="fab fa-facebook-f"></i></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,11 +148,27 @@
                 <p class="text-3">ONLINE & DIGITAL EXPERT</p>
             </div>
             <div class="col-10 btn-presentation">
-                <a class="" href="">Contact me</a>
+                <a class="" href="#contact">Contact me</a>
             </div>
-            <!-- <div class="btn__presentation">
-                <button>Contact me</button>
-            </div> -->
+            <div class="social">
+                <ul class="socialList">
+                    <li class="socialList__item">
+                        <a class="socialList__link" href="#" target="_blank">
+                            <span class="socialList__icon"><i class="fab fa-linkedin-in"></i></span>
+                        </a>
+                    </li>
+                    <li class="socialList__item">
+                        <a class="socialList__link" href="#" target="_blank">
+                            <span class="socialList__icon"><i class="fab fa-twitter"></i></span>
+                        </a>
+                    </li>
+                    <li class="socialList__item">
+                        <a class="socialList__link" href="#" target="_blank">
+                            <span class="socialList__icon"><i class="fab fa-facebook-f"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <!------------------------------------------------------------------------------------------------------------------>
@@ -279,7 +276,7 @@
 
     <div class="container" id="contact">
         <div class="title-styler">
-            <h2>CONTACT<span>ME</span></h2>
+            <h2>CONTACT<span> ME</span></h2>
             <span class="back-text">.contact ME</span>
         </div>
         <div class="contact_form">
@@ -324,7 +321,7 @@
                     <span class="focus-bg"></span>
                 </label>
                 <div class="f_buttons d-flex justify-content-end align-items-center">
-                    <button class="btn btn_erase" type="reset" onclick="eraseIcons(), btnDisabled()">
+                    <button class="btn_erase" type="reset" onclick="eraseIcons(), btnDisabled()">
                         <i class="fas fa-backspace"></i>
                     </button>
                     <button id="btnmodal" 
@@ -335,7 +332,6 @@
                         data-target="#ModalReserva" 
                         disabled="disabled" 
                         onclick="dataClient()">
-                        <span class="mr-2">Confirmar</span>
                         <i class="far fa-paper-plane"></i>
                     </button>
                 </div>
