@@ -1,54 +1,38 @@
-.title-styler {
+.about-me {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 60px;
 
 
-    h2 {
-        font-family: 'Lato', sans-serif;
-        font-size: 1.75rem;
-        color: white;
-        margin: 0;
-        z-index: 1;
 
-        span {
-            font-weight: 900;
-            background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72, #a8eb12);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    .about-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+        text-align: center;
+        text-align: end;
 
+        p {
+            font-size: 20px;
+            font-weight: 200;
+            padding: 3rem;
+            font-weight: 400;
+            color: white;
+            line-height: 1.5;
+        }
+    }
+    .about-img {
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 100%;
         }
     }
 
-    .back-text {
-        font-family: 'Lato', sans-serif;
-        font-weight: 900;
-        color: rgba(white, 0.05);
-        font-size: 3.25rem;
-        position: absolute;
-        text-transform: lowercase;
-        line-height: 1;
-        top: 0;
-        z-index: -1;
-    }
-}
 
-.about-me {
-    position: relative;
-
-    .about-text {
-        background: rgba( $color-white, 0.05);
-        backdrop-filter: blur(5px);
-        padding: 1.15rem;
-        border-radius: 10px;
-        font-weight: normal;
-        color: white;
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    
 }

@@ -8,10 +8,10 @@ $f-t: 0.5;
 }
 
 .form_style {
-    padding: 20px !important;
-    border-radius: 10px;
+    padding: 40px !important;
+    border-radius: 20px;
 
-    background:  linear-gradient(to right top, rgba($color-1, $f-t), rgba($color-2, $f-t), rgba($color-3, $f-t));
+    background: linear-gradient(116.89deg, #001535 0%, #002F19 100%);
     backdrop-filter: blur(5px);
 
     .inp {
@@ -60,12 +60,12 @@ $f-t: 0.5;
             font-weight: 400;
             background: none;
             box-shadow: inset 0 -1.5px 0 rgba(white, .3);
-            color: var(--theme-text-h-color);
+            color: white;
             transition: all .15s ease;
             resize: none;
 
             &:not(:placeholder-shown)+.label {
-                color: rgba(black, .5);
+                color: rgba(white, .5);
                 transform: translate3d(0, -20px, 0) scale(.75);
             }
             
@@ -92,51 +92,22 @@ $f-t: 0.5;
 .f_buttons {
     margin-top: 10px;
 
-    .btn_erase {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        color: rgba(white, 1);
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 100px;
-        margin: 5px;
-        border: 1.5px solid rgba(white, 1);
-        background: none;
-
-        &:hover {
-            // color: white;
-            color: rgba(red, 0.7);
-            transition: 0.2s ease all;
-        }
-        &:active {
-            transform: scale(0.9);
-            transition: 0.1s ease all;
-        }
-    }
+    
 
     .btn_submit {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60px;
-        height: 60px;
         color: white;
-        padding: 5px 15px;
-        font-size: 1rem;
-        border-radius: 100px;
-        margin: 5px;
-        border: 1px solid fill;
-        border-color: linear-gradient(to right top, rgba($color-1, $f-t), rgba($color-2, $f-t), rgba($color-3, $f-t));
-        background-color: green;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 15px;
 
-        &:disabled {
-            color: rgba($color-white, $f-t);
-            background: none;
-            border: 1px solid rgba(white, 0.5);
+        i {
+            margin-left: 7px;
         }
+        
 
     }
 
@@ -252,4 +223,8 @@ $f-t: 0.5;
 
 .formulario_grupo_incorrecto .formulario_input {
 	border: 3px solid red;
+}
+
+.slogan {
+    width: 100%;
 }
