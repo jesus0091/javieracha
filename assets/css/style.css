@@ -677,7 +677,7 @@ template {
 }
 
 .formulario__btn:hover {
-  box-shadow: 3px 0px 30px #a3a3a3;
+  box-shadow: 3px 0px 30px rgb(163, 163, 163);
 }
 
 .formulario_mensaje_exito {
@@ -759,11 +759,45 @@ template {
 }
 
 .gradient-box {
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, #1faf7b, #0e60c0) border-box;
+  background: linear-gradient(#000, #000) padding-box, linear-gradient(to right, rgb(31, 175, 123), rgb(14, 96, 192)) border-box;
   border-radius: 20px;
   border: 8px solid transparent;
 }
 
+@media (max-width: 768px) {
+  .title-styler {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .title-styler h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem;
+    color: white;
+    margin: 0;
+    z-index: 1;
+  }
+  .title-styler h2 span {
+    font-weight: 900;
+    background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72, #a8eb12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .title-styler .back-text {
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 4rem;
+    position: absolute;
+    line-height: 1;
+    top: -75%;
+    z-index: -1;
+  }
+}
 /* --------------------- imports ------------------ */
 /* ------------------------------------------------ */
 body {
@@ -965,13 +999,17 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .about-me {
+    margin-bottom: 4rem;
+  }
+}
 .about-me .about-text {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 15px 0;
-  text-align: center;
   text-align: end;
 }
 .about-me .about-text p {
@@ -980,7 +1018,14 @@ body {
   padding: 3rem;
   font-weight: 400;
   color: white;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .about-me .about-text p {
+    padding: 0 10px 0;
+    font-size: 16px;
+    text-align: center;
+  }
 }
 .about-me .about-img {
   display: flex;
@@ -1169,6 +1214,11 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 768px) {
+  .w-ido .card-do .gap-do {
+    padding: 10px;
+  }
+}
 .w-ido .card-do .gap-do img {
   width: 100%;
 }
@@ -1189,6 +1239,12 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 1rem;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .w-ido .card-do .card-b {
+    font-size: 14px;
+  }
 }
 
 .experience .ex-list {
@@ -1196,9 +1252,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0;
 }
 .experience .ex-list li {
+  display: flex;
+  width: 33%;
   padding: 0.5rem;
+}
+.experience .ex-list li img {
+  width: 100%;
 }
 
 .c-contact .contact-style {

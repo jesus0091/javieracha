@@ -60,3 +60,43 @@
     border: 8px solid transparent;
 
 }
+
+@media (max-width: 768px) {
+    .title-styler {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.75rem;
+            color: white;
+            margin: 0;
+            z-index: 1;
+
+            span {
+                font-weight: 900;
+                background: -webkit-linear-gradient(left bottom, #004d7a, #008793, #00bf72, #a8eb12);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+        }
+
+        .back-text {
+            font-weight: 900;
+            color: rgba(white, 0.1);
+            font-size: 4rem;
+            position: absolute;
+            line-height: 1;
+            top: -75%;
+            z-index: -1;
+        }
+    }
+
+}
